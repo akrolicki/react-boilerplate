@@ -18,8 +18,9 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "yarn test",
-      "yarn format"
+      "yarn prettier:fix",
+      "yarn lint:fix",
+      "jest --bail --findRelatedTests --passWithNoTests"
     ]
   },
   "dependencies": {

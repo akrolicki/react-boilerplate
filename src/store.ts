@@ -1,4 +1,4 @@
-import { AnyAction, combineReducers, configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import type { TypedUseSelectorHook } from 'react-redux';
 import { listenerMiddleware } from './listenerMiddleware';
