@@ -1,8 +1,9 @@
-import { AnyAction, combineReducers, configureStore } from '@reduxjs/toolkit';
-import { useDispatch, useSelector } from 'react-redux';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { TypedUseSelectorHook } from 'react-redux';
-import { listenerMiddleware } from './listenerMiddleware';
+import { useDispatch, useSelector } from 'react-redux';
+
 import homeSlice from './home/homeSlice';
+import { listenerMiddleware } from './listenerMiddleware';
 
 const appReducer = combineReducers({
   [homeSlice.name]: homeSlice.reducer,
