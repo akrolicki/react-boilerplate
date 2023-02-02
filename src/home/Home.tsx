@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Button from 'src/components/Button';
 import { useAppDispatch, useAppSelector } from 'src/store';
 import { selectData, selectIsLoadingData } from './homeSelectors';
@@ -9,6 +10,10 @@ const Home = () => {
   const isLoadingData = useAppSelector(selectIsLoadingData);
 
   const onRequestData = () => dispatch(requestData());
+
+  useEffect(() => {
+    console.log('data', data);
+  }, []);
 
   return (
     <div>
