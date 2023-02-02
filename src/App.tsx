@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+
 import AnotherPage from './another-page/AnotherPage';
 import Home from './home/Home';
 import Layout from './layout/Layout';

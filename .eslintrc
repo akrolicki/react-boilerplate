@@ -11,7 +11,7 @@
     // Make sure it"s always the last config, so it gets the chance to override other configs.
     "eslint-config-prettier"
   ],
-  "plugins": ["react-hooks", "unused-imports"],
+  "plugins": ["react-hooks", "unused-imports", "simple-import-sort"],
   "globals": {
     "module": false
   },
@@ -41,6 +41,8 @@
     "react-hooks/exhaustive-deps": "error",
     "react/prop-types": "off",
     "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": "warn"
+    "unused-imports/no-unused-vars": "warn",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   }
 }
