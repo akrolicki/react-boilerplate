@@ -5,6 +5,6 @@ describe('add', () => {
     expect(add(2, 3)).toEqual(5);
   });
   it('should correctly add two numbers even if number is negative', () => {
-    expect(add(2, -3)).toEqual(111);
+    expect(add(2, -3)).toEqual(1111);
   });
 });
