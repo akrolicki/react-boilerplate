@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "yarn lint --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "yarn prettier --write",
+    "format": "yarn prettier:fix && yarn lint:fix",
     "test": "jest",
     "test-watch": "jest --watch",
     "prepare": "husky install"
@@ -16,7 +19,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "yarn test",
-      "yarn lint:fix"
+      "yarn format"
     ]
   },
   "dependencies": {
