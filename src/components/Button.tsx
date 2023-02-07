@@ -5,7 +5,7 @@ type ButtonProps = React.ComponentProps<'button'> & {
   preset?: 'primary' | 'secondary';
 };
 
-const Button = ({ children, className, preset, ...props }: ButtonProps) => {
+const Button = ({ children, className, preset = 'primary', ...props }: ButtonProps) => {
   return (
     <button
       className={overrideTailwindClasses(
@@ -23,10 +23,6 @@ const Button = ({ children, className, preset, ...props }: ButtonProps) => {
       <span className="truncate">{children}</span>
     </button>
   );
-};
-
-Button.defaultProps = {
-  preset: 'primary',
 };
 
 export default Button;
