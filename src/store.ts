@@ -2,11 +2,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 
-import homeSlice from './home/homeSlice';
 import { listenerMiddleware } from './listenerMiddleware';
+import apiSlice from './pages/api/apiSlice';
 
 const appReducer = combineReducers({
-  [homeSlice.name]: homeSlice.reducer,
+  [apiSlice.name]: apiSlice.reducer,
 });
 
 export const store = configureStore({

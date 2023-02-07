@@ -10,10 +10,10 @@ const Button = ({ children, className, preset = 'primary', ...props }: ButtonPro
     <button
       className={overrideTailwindClasses(
         clsx(
-          'flex shrink-0 items-center justify-center rounded-md p-2 font-medium transition focus:outline-none',
+          'flex shrink-0 items-center justify-center rounded-md p-2 font-medium text-white transition focus:outline-none',
           {
-            'bg-primary': preset === 'primary',
-            'bg-secondary': preset === 'secondary',
+            'bg-primary hover:bg-primary/90': preset === 'primary',
+            'bg-secondary hover:bg-secondary/90': preset === 'secondary',
           },
           className,
         ),

@@ -17,16 +17,10 @@ const initialState: HomeState = {
   data: undefined,
 };
 
-const homeSlice = createSlice({
+const apiSlice = createSlice({
   name: 'home',
   initialState,
   reducers: {
-    increaseCount(state, action: PayloadAction<number>) {
-      state.count += action.payload;
-    },
-    decreaseCountByOne(state) {
-      state.count -= 1;
-    },
     requestData(state) {
       state.isLoadingData = true;
     },
@@ -34,9 +28,13 @@ const homeSlice = createSlice({
       state.data = action.payload;
       state.isLoadingData = false;
     },
+    clear(state) {
+      state.data = [];
+      state.isLoadingData = false;
+    },
   },
 });
 
-export const { increaseCount, decreaseCountByOne, requestData, dataFetched } = homeSlice.actions;
+export const { requestData, dataFetched, clear } = apiSlice.actions;
 
-export default homeSlice;
+export default apiSlice;
