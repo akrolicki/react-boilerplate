@@ -1,4 +1,4 @@
-import Button from 'src/components/button/Button';
+import Button from 'src/components/Button';
 import { useAppDispatch, useAppSelector } from 'src/store';
 
 import { selectData, selectIsLoadingData } from './apiSelectors';
