@@ -36,6 +36,7 @@
     "vite-tsconfig-paths": "^4.0.5"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.0.0-beta.43",
     "@storybook/addon-essentials": "^7.0.0-beta.43",
     "@storybook/addon-interactions": "^7.0.0-beta.43",
     "@storybook/addon-links": "^7.0.0-beta.43",

@@ -2,6 +2,9 @@ import clsx from 'clsx';
 import { overrideTailwindClasses } from 'tailwind-override';
 
 type ButtonProps = React.ComponentProps<'button'> & {
+  /**
+   * Control an appearance of the button
+   */
   preset?: 'primary' | 'secondary';
 };
 
