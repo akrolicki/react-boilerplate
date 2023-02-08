@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Layout from './layout/Layout';
 import AnotherPage from './pages/api/api';
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
 import { routes } from './routes';
 import { store } from './store';
 

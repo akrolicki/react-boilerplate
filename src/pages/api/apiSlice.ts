@@ -1,36 +1,34 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type HomeRecord = {
+type ApiRecord = {
   name: string;
   id: string;
 };
 
-type HomeState = {
-  count: number;
+type ApiState = {
   isLoadingData: boolean;
-  data?: HomeRecord[];
+  data?: ApiRecord[];
 };
 
-const initialState: HomeState = {
-  count: 0,
+const initialState: ApiState = {
   isLoadingData: false,
   data: undefined,
 };
 
 const apiSlice = createSlice({
-  name: 'home',
+  name: 'Api',
   initialState,
   reducers: {
     requestData(state) {
       state.isLoadingData = true;
     },
-    dataFetched(state, action: PayloadAction<HomeRecord[]>) {
+    dataFetched(state, action: PayloadAction<ApiRecord[]>) {
       state.data = action.payload;
       state.isLoadingData = false;
     },
     clear(state) {
-      state.data = [];
-      state.isLoadingData = false;
+      state.data = initialState.data;
+      state.isLoadingData = initialState.isLoadingData;
     },
   },
 });
