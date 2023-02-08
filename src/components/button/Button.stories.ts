@@ -8,6 +8,7 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
+  argTypes: { onClick: { action: 'clicked' } },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -18,7 +19,6 @@ export const Primary: Story = {
   args: {
     preset: 'primary',
     children: 'Button',
-    onClick: () => console.log('button clicked'),
   },
 };
 
