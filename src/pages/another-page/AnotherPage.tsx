@@ -1,8 +1,8 @@
 import Button from 'src/components/Button';
 import { useAppDispatch, useAppSelector } from 'src/store';
 
-import { selectData, selectIsLoadingData } from './apiSelectors';
-import { clear, requestData } from './apiSlice';
+import { selectData, selectIsLoadingData } from './anotherPageSelectors';
+import { clear, requestData } from './anotherPageSlice';
 
 const AnotherPage = () => {
   const dispatch = useAppDispatch();

@@ -1,28 +1,28 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type ApiRecord = {
+type AnotherPageRecord = {
   name: string;
   id: string;
 };
 
-type ApiState = {
+type AnotherPageState = {
   isLoadingData: boolean;
-  data?: ApiRecord[];
+  data?: AnotherPageRecord[];
 };
 
-const initialState: ApiState = {
+const initialState: AnotherPageState = {
   isLoadingData: false,
   data: undefined,
 };
 
-const apiSlice = createSlice({
-  name: 'Api',
+const anotherPageSlice = createSlice({
+  name: 'anotherPageApi',
   initialState,
   reducers: {
     requestData(state) {
       state.isLoadingData = true;
     },
-    dataFetched(state, action: PayloadAction<ApiRecord[]>) {
+    dataFetched(state, action: PayloadAction<AnotherPageRecord[]>) {
       state.data = action.payload;
       state.isLoadingData = false;
     },
@@ -33,6 +33,6 @@ const apiSlice = createSlice({
   },
 });
 
-export const { requestData, dataFetched, clear } = apiSlice.actions;
+export const { requestData, dataFetched, clear } = anotherPageSlice.actions;
 
-export default apiSlice;
+export default anotherPageSlice;

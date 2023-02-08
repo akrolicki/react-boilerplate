@@ -1,9 +1,9 @@
 import { AppStartListening } from 'src/listenerMiddleware';
 
 import { add } from '../../logic/add/add';
-import { dataFetched, requestData } from './apiSlice';
+import { dataFetched, requestData } from './anotherPageSlice';
 
-export const addApiListeners = (startListening: AppStartListening) => {
+export const addAnotherPageListeners = (startListening: AppStartListening) => {
   startListening({
     actionCreator: requestData,
     effect: async (_action, api) => {

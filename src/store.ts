@@ -3,10 +3,10 @@ import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { listenerMiddleware } from './listenerMiddleware';
-import apiSlice from './pages/api/apiSlice';
+import anotherPageSlice from './pages/another-page/anotherPageSlice';
 
 const appReducer = combineReducers({
-  [apiSlice.name]: apiSlice.reducer,
+  [anotherPageSlice.name]: anotherPageSlice.reducer,
 });
 
 export const store = configureStore({

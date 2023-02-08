@@ -9,8 +9,8 @@ const Sidebar = () => (
         to: routes.home,
       },
       {
-        label: 'Api',
-        to: routes.api,
+        label: 'Another page',
+        to: routes.anotherPage,
       },
     ].map((item) => (
       <NavLink

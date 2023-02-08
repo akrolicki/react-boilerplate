@@ -1,5 +1,5 @@
 export const routes = {
   home: '/',
-  api: '/api',
+  anotherPage: '/anotherPage',
   wildcard: '*',
 };
