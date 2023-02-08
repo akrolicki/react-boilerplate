@@ -1,6 +1,6 @@
 import { AppStartListening } from 'src/listenerMiddleware';
 
-import { add } from '../../logic/add/add';
+import { add } from '../../logic/add';
 import { dataFetched, requestData } from './anotherPageSlice';
 
 export const addAnotherPageListeners = (startListening: AppStartListening) => {
