@@ -1,9 +1,10 @@
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
-import AnotherPage from './another-page/AnotherPage';
-import Home from './home/Home';
 import Layout from './layout/Layout';
+import AnotherPage from './pages/another-page/AnotherPage';
+import Home from './pages/home/Home';
+import { routes } from './routes';
 import { store } from './store';
 
 const App = () => {
@@ -11,8 +12,8 @@ const App = () => {
     <Provider store={store}>
       <Layout>
         <Routes>
-          <Route path="/another-page" element={<AnotherPage />} />
-          <Route path="*" element={<Home />} />
+          <Route path={routes.anotherPage} element={<AnotherPage />} />
+          <Route path={routes.wildcard} element={<Home />} />
         </Routes>
       </Layout>
     </Provider>
