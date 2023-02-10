@@ -1,4 +1,26 @@
-# Libraries and technologies used
+## Install & Start
+
+⚠️ Using [Yarn Package Manager](https://yarnpkg.com) is recommended over `npm`.
+
+### Install dependencies
+
+```shell
+yarn
+```
+
+### Run frontend app in develop mode
+
+```shell
+yarn dev
+```
+
+### Run Storybook in develop mode
+
+```shell
+yarn storybook
+```
+
+## Libraries and technologies used
 
 - vite
 - react
@@ -12,7 +34,3 @@
 - prettier
 - eslint
 - husky + lint-staged (precommit hooks)
-
-TODO:
-
-- add svgr
