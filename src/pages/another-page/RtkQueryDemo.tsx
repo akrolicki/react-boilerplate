@@ -11,7 +11,7 @@ const RtkQueryDemo = () => {
         data.map((cat) => (
           <div key={cat.id}>
             Cat id: {cat.id}
-            <img src={cat.url} alt={`Cat - ${cat.id}`} />
+            <img src={cat.url} alt={`Cat - ${cat.id}`} className="h-64" />
           </div>
         ))}
       {isFetching && <div>Loading...</div>}
