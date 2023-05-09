@@ -16,7 +16,7 @@ const initialState: AnotherPageState = {
 };
 
 const anotherPageSlice = createSlice({
-  name: 'anotherPageApi',
+  name: 'anotherPage',
   initialState,
   reducers: {
     requestData(state) {

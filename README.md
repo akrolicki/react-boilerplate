@@ -28,7 +28,7 @@ yarn storybook
 - react-router
 - jest
 - storybook
-- reduxjs toolkit (slices + listeners middleware - depending on specific project it can be removed or replaced with ex. RTK Query)
+- reduxjs toolkit (rtk query + slices + listeners middleware - depending on specific project ex. listeners middleware or slices could be removed)
 - tailwindcss
 - clsx
 - prettier

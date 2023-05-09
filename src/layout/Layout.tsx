@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="relative flex h-screen flex-row">
       <Sidebar />
-      <div className="relative w-full flex-grow overflow-x-hidden bg-white">{children}</div>
+      <div className="relative w-full flex-grow overflow-x-hidden bg-gray-50">{children}</div>
     </div>
   );
 };
