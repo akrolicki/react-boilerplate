@@ -1,17 +1,14 @@
 import clsx from 'clsx';
-import { overrideTailwindClasses } from 'tailwind-override';
+import { twMerge } from 'tailwind-merge';
 
 type ButtonProps = React.ComponentProps<'button'> & {
-  /**
-   * Control an appearance of the button
-   */
   preset?: 'primary' | 'secondary';
 };
 
 const Button = ({ children, className, preset = 'primary', ...props }: ButtonProps) => {
   return (
     <button
-      className={overrideTailwindClasses(
+      className={twMerge(
         clsx(
           'flex shrink-0 items-center justify-center rounded-md p-2 font-medium text-white transition focus:outline-none',
           {
