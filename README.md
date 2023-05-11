@@ -34,3 +34,4 @@ yarn storybook
 - prettier
 - eslint
 - husky + lint-staged (precommit hooks)
+- svgr

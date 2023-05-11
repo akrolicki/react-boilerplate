@@ -15,6 +15,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "prepare": "husky install",
+    "icons": "svgr --icon --replace-attr-values '#D9D9D9=currentColor' --index-template iconIndexTemplate.cjs -d src/icons src/icons/svg --typescript --jsx-runtime 'automatic'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -45,6 +46,7 @@
     "@storybook/react": "^7.0.10",
     "@storybook/react-vite": "^7.0.10",
     "@storybook/testing-library": "^0.1.0",
+    "@svgr/cli": "^8.0.1",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
