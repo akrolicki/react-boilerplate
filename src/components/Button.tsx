@@ -1,23 +1,37 @@
+import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-type ButtonProps = React.ComponentProps<'button'> & {
-  preset?: 'primary' | 'secondary';
-};
+const buttonStyles = cva(
+  'flex shrink-0 items-center justify-center rounded-md font-medium text-white transition focus:outline-none',
+  {
+    variants: {
+      preset: {
+        primary: 'bg-primary hover:bg-primary/90',
+        secondary: 'bg-secondary hover:bg-secondary/90 rounded-2xl border-gray-800',
+      },
+      size: {
+        small: 'p-1',
+        medium: 'p-2',
+        large: 'p-3',
+      },
+      fullWidth: {
+        true: 'w-full',
+      },
+    },
+    defaultVariants: {
+      preset: 'primary',
+      size: 'medium',
+    },
+  },
+);
 
-const Button = ({ children, className, preset = 'primary', ...props }: ButtonProps) => {
+type ButtonProps = React.ComponentProps<'button'> & VariantProps<typeof buttonStyles>;
+
+const Button = ({ children, className, preset, size, fullWidth, ...props }: ButtonProps) => {
   return (
     <button
-      className={twMerge(
-        clsx(
-          'flex shrink-0 items-center justify-center rounded-md p-2 font-medium text-white transition focus:outline-none',
-          {
-            'bg-primary hover:bg-primary/90': preset === 'primary',
-            'bg-secondary hover:bg-secondary/90': preset === 'secondary',
-          },
-          className,
-        ),
-      )}
+      className={twMerge(clsx(buttonStyles({ preset, size, fullWidth }), className))}
       {...props}
     >
       <span className="truncate">{children}</span>
