@@ -1,4 +1,4 @@
-import widelab from 'src/assets/widelab-logo.svg';
+import widelab from 'src/assets/widelab_logo.svg';
 
 const Home = () => {
   return (
