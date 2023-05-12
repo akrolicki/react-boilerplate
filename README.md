@@ -52,7 +52,7 @@ yarn storybook
   - page-name - all the files connected with this view like selectors, slices, api, components should be located here. In case there are plenty of specific components, it's ok to create additional components directory inside.
 - some-app-part-here - in case there is part of an app which isn't a page itselft, but has it's own logic, view put it in `module-name` directory
 
-### Files naming
+### Files and directories naming
 
 - components - `PascalCase`
 - svg files - `snake_case`
