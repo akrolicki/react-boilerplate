@@ -14,19 +14,19 @@ const allTypographyVariants: TypographyProps['variant'][] = [
   'heading3Xl',
   'heading2Xl',
   'headingXl',
-  'headingL',
-  'headingM',
-  'headingS',
+  'headingLg',
+  'headingMd',
+  'headingSm',
   'headingXs',
-  'captionM',
-  'captionS',
-  'paragraphL',
-  'paragraphM',
-  'paragraphS',
+  'captionMd',
+  'captionSm',
+  'paragraphLg',
+  'paragraphMd',
+  'paragraphSm',
   'paragraphXs',
-  'textL',
-  'textM',
-  'textS',
+  'textLg',
+  'textMd',
+  'textSm',
   'textXs',
 ];
 
@@ -35,7 +35,7 @@ export const Default = () => {
     <div className="flex flex-col gap-4">
       {allTypographyVariants.map((variant, index) => (
         <div key={index}>
-          <Typography variant="captionS" className="block text-gray-700">
+          <Typography variant="captionSm" className="block text-gray-700">
             {variant}
           </Typography>
           <Typography variant={variant}>Fox jumps over the lazy dog</Typography>
