@@ -1,4 +1,3 @@
-// import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps, useEffect, useRef } from 'react';
 import { IconBugReport, IconDownload } from 'src/icons';

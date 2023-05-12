@@ -41,6 +41,63 @@ module.exports = {
         100: '#242947',
       },
     },
+    fontSize: {
+      'h-3xl': [
+        '48px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-2xl': [
+        '40px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-xl': [
+        '32px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-lg': [
+        '24px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-md': [
+        '18px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-sm': [
+        '16px',
+        {
+          lineHeight: '120%',
+          fontWeight: '700',
+        },
+      ],
+      'h-xs': [
+        '14px',
+        {
+          lineHeight: '125%',
+          fontWeight: '700',
+        },
+      ],
+      'caption-md': ['12px', '125%'],
+      'caption-sm': ['10px', '125%'],
+      lg: ['18px', '160%'],
+      md: ['16px', '160%'],
+      sm: ['14px', '160%'],
+      xs: ['12px', '140%'],
+    },
     extend: {},
   },
   plugins: [],
