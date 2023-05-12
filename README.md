@@ -47,7 +47,7 @@ yarn storybook
 - icons - .tsx icons will be generated here automatically by `svgr`
   - svg - svg icons (.tsx icons are generated based on these svgs). To generate icons run `yarn icons`.
 - layout - layout connected components
-- logic - reusable logic
+- logic - reusable logic with unit tests (ex. `add.ts` and `add.test.ts`)
 - pages
   - page-name - all the files connected with this view like selectors, slices, api, components should be located here. In case there are plenty of specific components, it's ok to create additional components directory inside.
 - some-app-part-here - in case there is part of an app which isn't a page itselft, but has it's own logic, view put it in `module-name` directory
