@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.0.1",
     "@reduxjs/toolkit": "^1.9.5",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",

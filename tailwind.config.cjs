@@ -98,7 +98,15 @@ module.exports = {
       sm: ['14px', '160%'],
       xs: ['12px', '140%'],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'focus-primary': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #DBE3FF',
+        'focus-danger': '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FECDCA',
+      },
+      spacing: {
+        4.5: '1.125rem',
+      },
+    },
   },
   plugins: [],
 };
