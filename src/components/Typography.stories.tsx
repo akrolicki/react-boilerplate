@@ -1,33 +1,16 @@
-import type { Meta } from '@storybook/react';
-
-import Typography, { TypographyProps } from './Typography';
+import { twMerge } from 'tailwind-merge';
 
 const meta = {
   title: 'Components/Typography',
-  component: Typography,
   tags: ['autodocs'],
-} satisfies Meta<typeof Typography>;
+};
 
 export default meta;
 
-const allTypographyVariants: TypographyProps['variant'][] = [
-  'heading3Xl',
-  'heading2Xl',
-  'headingXl',
-  'headingLg',
-  'headingMd',
-  'headingSm',
-  'headingXs',
-  'captionMd',
-  'captionSm',
-  'paragraphLg',
-  'paragraphMd',
-  'paragraphSm',
-  'paragraphXs',
-  'textLg',
-  'textMd',
-  'textSm',
-  'textXs',
+const allTypographyVariants = [
+  'typography-heading-lg',
+  'typography-heading-md',
+  'typography-heading-sm',
 ];
 
 export const Default = () => {
@@ -35,10 +18,8 @@ export const Default = () => {
     <div className="flex flex-col gap-4">
       {allTypographyVariants.map((variant, index) => (
         <div key={index}>
-          <Typography variant="captionSm" className="block text-gray-700">
-            {variant}
-          </Typography>
-          <Typography variant={variant}>Fox jumps over the lazy dog</Typography>
+          <div className={twMerge('block text-gray-700')}>{variant}</div>
+          <div className={variant}>Fox jumps over the lazy dog</div>
         </div>
       ))}
     </div>

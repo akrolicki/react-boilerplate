@@ -5,7 +5,7 @@ const RtkQueryDemo = () => {
 
   return (
     <div className="mb-4 rounded-md border border-gray-400 bg-white p-4">
-      <h1 className="mb-4 text-lg font-bold">Example use of RTK Query</h1>
+      <h1 className="mb-4 font-bold typography-heading-sm">Example use of RTK Query</h1>
       {!data && !isFetching && <div>No data</div>}
       {data &&
         data.map((cat) => (

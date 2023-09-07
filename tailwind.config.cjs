@@ -42,63 +42,29 @@ module.exports = {
       },
     },
     fontSize: {
-      'h-3xl': [
-        '48px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-2xl': [
-        '40px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-xl': [
-        '32px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-lg': [
-        '24px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-md': [
-        '18px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-sm': [
-        '16px',
-        {
-          lineHeight: '120%',
-          fontWeight: '700',
-        },
-      ],
-      'h-xs': [
-        '14px',
-        {
-          lineHeight: '125%',
-          fontWeight: '700',
-        },
-      ],
-      'caption-md': ['12px', '125%'],
-      'caption-sm': ['10px', '125%'],
-      lg: ['18px', '160%'],
-      md: ['16px', '160%'],
-      sm: ['14px', '160%'],
-      xs: ['12px', '140%'],
+      'heading-lg-desktop': ['72px', { lineHeight: '80px', fontWeight: '500' }],
+      'heading-lg-mobile': ['48px', { lineHeight: '120%', fontWeight: '600' }],
+      'heading-md-desktop': ['56px', { lineHeight: '64px', fontWeight: '600' }],
+      'heading-sm-desktop': ['48px', { lineHeight: '56px', fontWeight: '600' }],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }) => {
+      addUtilities({
+        '.typography-heading-lg': {
+          '@apply text-heading-lg-mobile': {},
+          '@screen sm': {
+            '@apply text-heading-lg-desktop': {},
+          },
+        },
+        '.typography-heading-md': {
+          '@apply text-heading-md-desktop': {},
+        },
+        '.typography-heading-sm': {
+          '@apply text-heading-sm-desktop': {},
+        },
+      });
+    },
+  ],
 };
